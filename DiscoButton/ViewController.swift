@@ -14,6 +14,10 @@ class ViewController: UIViewController {
 
     @IBAction func changeColour(sender: AnyObject) {
         
+        if let button = sender as? UIButton {
+            button.setTitleColor(self.convertRGBtoAppleRGB(135, green: 16, blue: 60), forState: UIControlState.Normal)
+        }
+        
         switch(self.iteration) {
         case 1:
             self.view.backgroundColor = self.convertRGBtoAppleRGB(253 , green: 230, blue: 189)
